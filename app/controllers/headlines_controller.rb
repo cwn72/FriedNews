@@ -7,13 +7,22 @@ class HeadlinesController < ApplicationController
 
     #check for invalid format here
     if( @day == 0 || @year == 0 || @month == 0 )
-      redirect_to root_path
+      respond_to do |format|
+        format.html { redirect_to root_path }
+        format.json {render :json => nil}
+      end
+      return
     end
 
     start_date = Date.new(@year,@month,@day).beginning_of_day
     end_date = start_date + 1.days
 
     @headlines = Headline.where(:created_at => start_date..end_date)
+
+    respond_to do |format|
+      format.html
+      format.json{ render :json => @headlines }
+    end
   end
 
   private
