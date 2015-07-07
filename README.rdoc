@@ -1,0 +1,7 @@
+FriedNews is a news summary app based on the surf report website http://friedsurfreport.com.
+
+It follows the same concept, doing a single task in a simple and easy to use manner. I call this
+style of development "Simplicity as a feature"
+
+As you will see, there is little to no css styling, this is an exaggeration of the simplicity.
+
