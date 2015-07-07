@@ -16,6 +16,7 @@ gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
 
 group :development, :test do
+  gem 'rspec-rails', '~> 3.0'
   gem 'sqlite3'
   gem 'byebug'
   gem 'web-console', '~> 2.0'
