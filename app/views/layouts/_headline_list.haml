@@ -1,0 +1,6 @@
+%ul
+  -for headline in @headlines
+    %li
+      %h3
+        %a{:href => headline.ref}
+          = headline.title
